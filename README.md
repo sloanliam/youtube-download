@@ -2,7 +2,8 @@
 
 ###Tech Stack
 - React, TypeScript
-- Python, Flask
+- Express, TypeScript
+- Python (for automation)
 - ECS, Docker
 
 

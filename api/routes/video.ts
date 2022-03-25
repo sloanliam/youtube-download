@@ -6,13 +6,15 @@ const router = express.Router();
 
 router.use(express.json())
 
-router.get('/download', (req, res) => {
-    let videoPath = 'https://www.youtube.com/watch?v=sFsRylCQblw'
+router.post('/download', (req, res) => {
+    let videoPath = req.body.path;
     let outputPath = path.join(__dirname, '../../out/video.mp3');
 
-    getAudio(videoPath, () => {
+    getAudio(videoPath);
+
+    setTimeout(() => {
         res.download(outputPath);
-    });  
+    }, 5000);
 });
 
 module.exports = router;
