@@ -17,4 +17,8 @@ router.post('/download', (req, res) => {
     }, 5000);
 });
 
+router.get('/', (req, res) => {
+    res.send('hello world');
+});
+
 module.exports = router;
